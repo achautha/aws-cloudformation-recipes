@@ -19,4 +19,9 @@
 [b2]:https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=s3example1&templateURL=https://s3.amazonaws.com/atharvac-cf-templates/s3/beginner/bucket_public_read.yaml
 
 
-3.
+### intermediate
+
+3. Static website hosting : [![launch stack][c1]][c2]
+
+[c1]:https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png
+[c2]:https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=s3example1&templateURL=https://s3.amazonaws.com/atharvac-cf-templates/s3/intemediate/static_website_hosting.yaml
