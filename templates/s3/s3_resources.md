@@ -8,5 +8,6 @@
 ### Beginner
 
 1. Create simple bucket with default settings : ![launch stack][2]
-[2]: https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png
+
+[2]:https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png
 
