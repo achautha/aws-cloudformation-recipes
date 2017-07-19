@@ -12,5 +12,5 @@ Sample cloudformation recipes for common aws tasks
 
 ## Sections
 
-### 1.  [S3 Examples](s3/s3_resources.md)
+### 1.  [S3 Examples](templates/s3/s3_resources.md)
 

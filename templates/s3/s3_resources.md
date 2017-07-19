@@ -9,4 +9,7 @@
 
 1. Create simple bucket with default settings : ![](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)
 
-2.
+[![launch stack][2]][1]
+    [1]: https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=s3example1&templateURL=https://s3.amazonaws.com/atharvac-cf-templates/s3/beginner/bucket_with_defaults.yaml
+    [2]: https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png
+
