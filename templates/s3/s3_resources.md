@@ -17,3 +17,6 @@
 
 [b1]:https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png
 [b2]:https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=s3example1&templateURL=https://s3.amazonaws.com/atharvac-cf-templates/s3/beginner/bucket_public_read.yaml
+
+
+3.
