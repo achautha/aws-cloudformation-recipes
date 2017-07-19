@@ -7,7 +7,7 @@
 
 ### Beginner
 
-1. Create simple bucket with default settings : ![launch stack][2]
+1. Create simple bucket with default settings : [![launch stack][1]][2]
 
-[2]:https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png
-
+[1]:https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png
+[2]:https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=s3example1&templateURL=https://s3.amazonaws.com/atharvac-cf-templates/s3/beginner/bucket_with_defaults.yaml
