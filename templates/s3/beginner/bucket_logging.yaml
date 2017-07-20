@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  MyBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: PublicRead
+      LoggingConfiguration:
+        DestinationBucketName: !Ref 'MyLoggingBucket'
+        LogFilePrefix: mylogs
+  MyLoggingBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: LogDeliveryWrite
+Outputs:
+  BucketName:
+    Value: !Ref 'MyBucket'
+    Description: name of the bucket
+  LogBucketName:
+    Value: !Ref 'MyLoggingBucket'
+    Description: name of the log bucket
