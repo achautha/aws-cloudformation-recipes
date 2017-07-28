@@ -31,4 +31,15 @@
 
 [is2]:https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=s3example1&templateURL=https://s3.amazonaws.com/atharvac-cf-templates/s3/intemediate/versioning_cors.yaml
 
+
+3. Lifecycle management, Storage Classes and Expiration: [![launch stack][lsimage]][is3]
+
+[is3]:https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=s3example1&templateURL=https://s3.amazonaws.com/atharvac-cf-templates/s3/intemediate/lifecycle_expiration.yaml
+
+
+4. Bucket policy: [![launch stack][lsimage]][is4]
+
+[is4]:https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=s3example1&templateURL=https://s3.amazonaws.com/atharvac-cf-templates/s3/intemediate/bucket_policy.yaml
+
+
 [lsimage]:https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png

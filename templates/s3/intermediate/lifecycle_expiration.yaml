@@ -1,0 +1,37 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description : 'Lifecycle rules for a bucket'
+Resources:
+  MainBucket:
+    Type: 'AWS::S3::Bucket'
+    Metadata:
+      comment : 'Expiration rule - 15 days'
+    Properties:
+      LifecycleConfiguration:
+        Rules:
+          - ExpirationInDays : 15
+            Status: Enabled
+      AccessControl: PublicRead
+
+  SecondaryBucket:
+    Type: 'AWS::S3::Bucket'
+    Metadata:
+      comment : 'Content moved to S3-IA after 30 days. to GLACIER after 60 and to expires after 90'
+    Properties:
+      LifecycleConfiguration:
+        Rules:
+          - Status: Enabled
+            Transitions:
+              - StorageClass: STANDARD_IA
+                TransitionInDays: 30
+              - StorageClass: GLACIER
+                TransitionInDays: 60
+            ExpirationInDays: 90
+      AccessControl: PublicRead
+Outputs:
+  MainBucketName:
+    Description: Name of the bucket
+    Value: !Ref MainBucket
+
+  SecondaryBucketName:
+    Description: Name of the bucket
+    Value: !Ref SecondaryBucket

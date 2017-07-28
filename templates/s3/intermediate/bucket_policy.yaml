@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description : 'Bucket with access policy'
+Resources:
+  MyBucket:
+    Type: 'AWS::S3::Bucket'
+
+  MyBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Metadata:
+      comment : 'Bucket policy to allow all users get access but deny put access.'
+    Properties:
+      Bucket: !Ref MyBucket
+      PolicyDocument:
+        Statement:
+          - Action: ['s3:GetObject']
+            Effect: Allow
+            Principal: '*'
+            Resource:
+              Fn::Join: ['', ['arn:aws:s3:::',{Ref: MyBucket}, '/*' ]]
+          - Action: ['s3:PutObject']
+            Effect: Deny
+            Principal: '*'
+            Resource:
+              Fn::Join: ['', ['arn:aws:s3:::', {Ref: MyBucket}, '/*' ]]
+
+Outputs:
+  MyBucketName:
+    Description: Name of the bucket
+    Value: !Ref MyBucket
+
