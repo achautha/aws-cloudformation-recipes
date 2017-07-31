@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  MyAdminUser:
+    Type: AWS::IAM::User
+    Properties:
+      UserName: MyCompanyAdminUser
+      LoginProfile:
+        Password: P@sswOrd1
+      Policies:
+        - PolicyName: MyAdminUserPolicy
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action: ['*']
+                Resource: ['*']
+
+  MyAccessKey:
+    Type: AWS::IAM::AccessKey
+    Properties:
+      UserName: !Ref MyAdminUser
+
+Outputs:
+  access_key:
+    Value: !Ref MyAccessKey
+  secret_key:
+    Value: !GetAtt MyAccessKey.SecretAccessKey
