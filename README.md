@@ -7,7 +7,7 @@ Each example has **launch stack** button which redirects you to cloudformation c
 ## Sections
 
 ### 1.  [S3 Examples](templates/s3/s3_resources.md)
-### 2.  [IAM Examples](templates/iam/s3_resources.md)
+### 2.  [IAM Examples](templates/iam/iam_resources.md)
 
 ## References
 
