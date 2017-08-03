@@ -1,0 +1,35 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  MySysAdminGroup:
+    Type: AWS::IAM::Group
+    Properties:
+      GroupName: MySysAdminGroup
+      ManagedPolicyArns: ['arn:aws:iam::aws:policy/job-function/SystemAdministrator']
+
+  SysAdminUser1:
+    Type: AWS::IAM::User
+    Properties:
+      LoginProfile:
+        Password: P@sswOrd1
+
+  SysAdminUser2:
+    Type: AWS::IAM::User
+    Properties:
+      LoginProfile:
+        Password: P@sswOrd1
+
+  AddUsersToSysAdminGroup:
+    Type: AWS::IAM::UserToGroupAddition
+    Properties:
+      GroupName: !Ref MySysAdminGroup
+      Users:
+        - !Ref SysAdminUser1
+        - !Ref SysAdminUser2
+
+Outputs:
+  user1:
+    Value: !Ref SysAdminUser1
+  user2:
+    Value: !Ref SysAdminUser2
+
+
